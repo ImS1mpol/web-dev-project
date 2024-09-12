@@ -3,73 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Tutorial</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="registratioonTutorial.css">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="registrationpage.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="social-icons">
-            <a href="https://www.youtube.com" target="_blank">
-                <img src="img/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="img/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.tiktok.com" target="_blank">
-                <img src="img/tiktok.png" alt="TikTok">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="img/instagram.png" alt="Instagram">
-            </a>
-        </div>
-        <div class="logo">
-            <!-- Logo -->
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="registrationTutorial.html">Registration Tutorial</a></li>
-            <li><a href="rules.html">Rules & Guidelines</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="left-side">
-            <div class="tutorial-container">
-                <h1>Registration Tutorial</h1>
-                <p>Welcome to the registration tutorial! Here, we will guide you through the process of signing up for our events.</p>
+    <div class="page-container">
+        <div class="registration-container">
+            <h1>REGISTER NOW!</h1>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Last Name, First Name, Middle Initial" required />
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+                </div>
+                <div>
+                    <label for="student-number">Student Number:</label>
+                    <input type="text" id="student-number" name="student-number" placeholder="Enter your student number" required />
+                </div>
+                <div>
+                    <label for="section">Section:</label>
+                    <input type="text" id="section" name="section" placeholder="Enter your section" required />
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                        <button type="button" class="eye-icon" onclick="togglePasswordVisibility()">👁️</button>
+                    </div>
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required />
+                        <button type="button" class="eye-icon" onclick="toggleConfirmPasswordVisibility()">👁️</button>
+                    </div>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="links">
+                <p>Already have an account? <a href="index.html">Login</a></p>
                 
-                <h2>Step-by-Step Guide:</h2>
-                <ol>
-                    <li>Visit the registration page by clicking the 'Register' link.</li>
-                    <li>Fill in the required fields such as Name, Email Address, and Student Number.</li>
-                    <li>Create a secure password and confirm it.</li>
-                    <li>Submit your registration by clicking the 'Sign Up' button.</li>
-                    <li>You will receive a confirmation email with further instructions.</li>
-                </ol>
-                <p>If you encounter any issues, please contact support.</p>
-                
-                <h2>Rules and Guidelines</h2>
-                <p>This website is designed to streamline and manage event registrations at Our Lady of Fatima University, making it easier for participants to join and actively participate in upcoming events.</p>
-                
-                <h3>Rules:</h3>
-                <ul>
-                    <li>Users must create an account in order to join the events.</li>
-                    <li>Provide accurate information during registration.</li>
-                    <li>Prohibits sharing accounts or using someone else's account without permission.</li>
-                    <li>No multiple accounts unless necessary.</li>
-                </ul>
-                
-                <h3>Guidelines:</h3>
-                <ul>
-                    <li>Content should be posted in the correct categories or sections.</li>
-                    <li>Users must avoid off-topic discussions or irrelevant contributions.</li>
-                    <li>Information will be sent to the Gmail account of the user.</li>
-                    <li>Ensure you arrive on time for the event and fulfill any pre-event requirements.</li>
-                </ul>
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript for toggling password visibility
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            const passwordType = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = passwordType;
+        }
+
+        function toggleConfirmPasswordVisibility() {
+            const confirmPasswordField = document.getElementById('confirm-password');
+            const confirmPasswordType = confirmPasswordField.type === 'password' ? 'text' : 'password';
+            confirmPasswordField.type = confirmPasswordType;
+        }
+    </script>
 </body>
 </html>
