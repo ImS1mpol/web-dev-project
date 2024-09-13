@@ -3,34 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Navbar Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="social-icons">
-            <a href="https://www.youtube.com" target="_blank">
-                <img src="img/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="img/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.tiktok.com" target="_blank">
-                <img src="img/tiktok.png" alt="TikTok">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="img/instagram.png" alt="Instagram">
-            </a>
-        </div>
-        <div class="logo"></div>
-        <ul class="nav-links">
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="registrationTutorial.html">Registration Tutorial</a></li>
-            <li><a href="rules.html">Rules & Guidelines</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
     <div class="container">
         <div class="left-side">
             <h1>Join the Fatima Tech & E-Sports Games!</h1>
@@ -41,29 +17,28 @@
         </div>
         <div class="right-side">
             <div class="login-container">
-              <h2>Login</h2>
-              <form>
-                <label for="email">Email or Student Number:</label>
-                <input type="text" id="email" name="email" required />
-    
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required />
-    
-                <div class="options">
-                  <label>
-                    <input type="checkbox" id="remember" name="remember" />
-                    Remember me
-                  </label>
-                  <a href="#forgot-password">Forgot Password?</a>
-                </div>
-    
-                <button type="submit">Login</button>
-    
-                <p>Don't have an account?<a href="registrationpage.html">Sign up</a>
-                </p>
-              </form>
+                <h2>Login</h2>
+                <form action="homepage.html" method="get">
+                    <label for="email">Email or Student Number:</label>
+                    <input type="text" id="email" name="email" required aria-required="true" />
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required aria-required="true" />
+                    
+                    <div class="options">
+                        <label>
+                            <input type="checkbox" id="remember" name="remember" />
+                            Remember me
+                        </label>
+                        <a href="#forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit">Login</button>
+                    
+                    <p>Don't have an account? <a href="registrationpage.html">Sign up</a></p>
+                </form>                
             </div>
-          </div>
+        </div>
     </div>
 </body>
 </html>
